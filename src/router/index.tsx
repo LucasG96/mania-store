@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Routes, Route } from 'react-router-dom';
 import PageNotFound from '../pages/NotFound';
 import ProductModule from '../pages/Product';
 import ShoppingModule from '../pages/Shopping';
+import Layout from '../shared/components/Layout';
 import { ApplicationRoutes } from '../shared/utils/enum';
 
 function Router() {
@@ -12,7 +13,11 @@ function Router() {
     <BrowserRouter>
       <Routes>
         {routes.map((route) => (
-          <Route key={route.path} path={route.path} element={route.component} />
+          <Route
+            key={route.path}
+            path={route.path}
+            element={<Layout>{route.component}</Layout>}
+          />
         ))}
         <Route
           path="/"
