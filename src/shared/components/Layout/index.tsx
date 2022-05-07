@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import React, { ReactElement } from 'react';
 import Header from '../Header';
 
@@ -9,7 +10,9 @@ function Layout({ children }: ILayoutProps) {
   return (
     <div>
       <Header />
-      {children}
+      <main>
+        <Container sx={{ mt: 5 }}>{children}</Container>
+      </main>
     </div>
   );
 }

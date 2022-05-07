@@ -29,11 +29,27 @@ const theme = createTheme({
   spacing: 4,
   palette: {
     primary: { main: COLORS.BLUE.DEFAULT },
-    secondary: { main: COLORS.BLUE.LIGHT },
+    secondary: { main: COLORS.ORANGE.LIGHT },
     success: { main: COLORS.GREEN.DEFAULT },
     text: {
       primary: COLORS.BLACK.DEFAULT,
       secondary: COLORS.BLACK.LIGHT,
+    },
+  },
+  components: {
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          color: COLORS.GREEN.DEFAULT,
+        },
+      },
+    },
+    MuiBadge: {
+      styleOverrides: {
+        badge: {
+          color: COLORS.WHITE.DEFAULT,
+        },
+      },
     },
   },
 });
