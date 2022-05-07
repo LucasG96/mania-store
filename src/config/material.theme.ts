@@ -1,0 +1,41 @@
+import { createTheme } from '@mui/material/styles';
+
+export const COLORS = {
+  BLACK: {
+    DEFAULT: '#171717',
+    LIGHT: '#363636',
+  },
+  ORANGE: {
+    DEFAULT: '#E29101',
+    LIGHT: '#F9A424',
+  },
+  BLUE: {
+    DEFAULT: '#1A2767',
+    LIGHT: '#363D80',
+  },
+  LILAC: {
+    DEFAULT: '#A86FED',
+    LIGHT: '#B97FFF',
+  },
+  GREEN: {
+    DEFAULT: '#018684',
+  },
+  WHITE: {
+    DEFAULT: '#FFF',
+  },
+};
+
+const theme = createTheme({
+  spacing: 4,
+  palette: {
+    primary: { main: COLORS.BLUE.DEFAULT },
+    secondary: { main: COLORS.BLUE.LIGHT },
+    success: { main: COLORS.GREEN.DEFAULT },
+    text: {
+      primary: COLORS.BLACK.DEFAULT,
+      secondary: COLORS.BLACK.LIGHT,
+    },
+  },
+});
+
+export default theme;

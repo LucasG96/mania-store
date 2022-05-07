@@ -9,10 +9,11 @@ import {
   Container,
 } from '@mui/material';
 import Logo from '../../assets/logo.svg';
+import { COLORS } from '../../../config/material.theme';
 
 function Header() {
   return (
-    <AppBar position="static" sx={{ background: '#fff' }}>
+    <AppBar position="static" sx={{ background: COLORS.WHITE.DEFAULT }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex' }}>
@@ -20,13 +21,11 @@ function Header() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
+            <IconButton disableRipple aria-label="Carrinho de compras">
               <Badge badgeContent={4} color="success">
-                <ShoppingBagOutlined sx={{ fontSize: 40 }} />
+                <ShoppingBagOutlined
+                  sx={{ fontSize: 35, color: COLORS.ORANGE.DEFAULT }}
+                />
               </Badge>
             </IconButton>
           </Box>
