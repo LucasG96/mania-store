@@ -12,6 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import IProduct from '../../../../../shared/interfaces/IProduct';
+import useShoppingCartContext from '../../../../../context/shoppingCart/context';
 
 interface IProductCardProps {
   product: IProduct;
@@ -19,6 +20,8 @@ interface IProductCardProps {
 
 function ProductCard({ product }: IProductCardProps) {
   const [showMore, setShowMore] = useState(false);
+
+  const { addProduct } = useShoppingCartContext();
 
   const maxSizeDescription = 50;
   const descriptionExceedsSizeLimit =
@@ -114,7 +117,7 @@ function ProductCard({ product }: IProductCardProps) {
           <Button
             variant="contained"
             color="success"
-            onClick={() => setShowMore(true)}
+            onClick={() => addProduct(product)}
             sx={{
               borderRadius: 50,
               textTransform: 'lowercase',
