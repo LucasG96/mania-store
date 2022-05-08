@@ -21,7 +21,11 @@ describe('Tests page product list', () => {
   it('Component rendering correctly', async () => {
     jest
       .spyOn(ProductService, 'list')
-      .mockResolvedValue([product, product, product]);
+      .mockResolvedValue([
+        product,
+        { ...product, id: 2 },
+        { ...product, id: 3 },
+      ]);
 
     render(<ProductList />);
 
