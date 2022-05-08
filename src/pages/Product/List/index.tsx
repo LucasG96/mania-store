@@ -23,6 +23,7 @@ function ProductList() {
         flexWrap: 'wrap',
         justifyContent: 'space-evenly',
       }}
+      aria-label="Listagem de produtos"
     >
       {producs.map((product) => (
         <ProductCard key={product.id} product={product} />

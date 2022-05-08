@@ -39,7 +39,10 @@ function ProductCard({ product }: IProductCardProps) {
     : product.description;
 
   return (
-    <Card sx={{ minWidth: 300, maxWidth: 300, mb: 5 }}>
+    <Card
+      aria-label="Detalhes do produto"
+      sx={{ minWidth: 300, maxWidth: 300, mb: 5 }}
+    >
       <CardMedia
         component="img"
         height="150"
