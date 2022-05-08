@@ -70,6 +70,7 @@ function ProductCard({ product }: IProductCardProps) {
               precision={0.1}
               readOnly
               sx={{ mr: 1, fontSize: '1rem' }}
+              aria-label="Avaliação do produto"
             />
             {product.rating.count}
           </Box>
