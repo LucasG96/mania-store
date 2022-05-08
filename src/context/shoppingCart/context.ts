@@ -6,7 +6,7 @@ interface IShoppingCartContextProps {
   cart: ICartItem[];
   totalItems: number;
   addProduct: (product: IProduct) => void;
-  removeProduct: () => void;
+  removeProduct: (product: IProduct) => void;
   clearCart: () => void;
 }
 

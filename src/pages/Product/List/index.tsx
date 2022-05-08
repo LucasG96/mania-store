@@ -25,7 +25,7 @@ function ProductList() {
       }}
     >
       {producs.map((product) => (
-        <ProductCard product={product} />
+        <ProductCard key={product.id} product={product} />
       ))}
     </Box>
   );

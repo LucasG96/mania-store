@@ -23,6 +23,9 @@ export const COLORS = {
   WHITE: {
     DEFAULT: '#FFF',
   },
+  RED: {
+    LIGHT: '#ff5252',
+  },
 };
 
 const theme = createTheme({
@@ -31,6 +34,7 @@ const theme = createTheme({
     primary: { main: COLORS.BLUE.DEFAULT },
     secondary: { main: COLORS.ORANGE.LIGHT },
     success: { main: COLORS.GREEN.DEFAULT },
+    error: { main: COLORS.RED.LIGHT },
     text: {
       primary: COLORS.BLACK.DEFAULT,
       secondary: COLORS.BLACK.LIGHT,
