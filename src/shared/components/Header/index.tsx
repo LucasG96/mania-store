@@ -23,7 +23,7 @@ function Header() {
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex' }}>
             <Link to={ApplicationRoutes.ProdutList}>
-              <img src={Logo} alt="Logo" width={125} />
+              <img src={Logo} alt="Logo" width={100} />
             </Link>
           </Box>
 
@@ -32,7 +32,7 @@ function Header() {
               <Badge badgeContent={totalItems} color="secondary">
                 <Link to={ApplicationRoutes.ShoppingCart}>
                   <ShoppingBagOutlined
-                    sx={{ fontSize: 35, color: COLORS.GREEN.DEFAULT }}
+                    sx={{ fontSize: 30, color: COLORS.GREEN.DEFAULT }}
                   />
                 </Link>
               </Badge>

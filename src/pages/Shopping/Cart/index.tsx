@@ -15,13 +15,29 @@ import { COLORS } from '../../../config/material.theme';
 import { ApplicationRoutes } from '../../../shared/utils/enum';
 
 function ShoppingCart() {
-  const { cart, addProduct, removeProduct } = useShoppingCartContext();
+  const { cart, addProduct, removeProduct, clearCart } =
+    useShoppingCartContext();
 
   return (
     <Box>
       <Typography color="primary" variant="h5" sx={{ mb: 7 }}>
         seu carrinho
       </Typography>
+      {cart.length > 0 && (
+        <Button
+          color="error"
+          variant="contained"
+          onClick={clearCart}
+          sx={{
+            border: 'none',
+            borderRadius: 50,
+            textTransform: 'lowercase',
+            mb: 7,
+          }}
+        >
+          esvaziar carrinho
+        </Button>
+      )}
       {cart.length === 0 && (
         <Typography variant="h6">
           Ops... seu carrinho está vazio.{' '}
@@ -37,8 +53,14 @@ function ShoppingCart() {
       )}
       {cart.map((cartItem) => (
         <Box key={cartItem.product.id}>
-          <Grid container>
-            <Grid item xs={5} alignItems="center" sx={{ display: 'flex' }}>
+          <Grid container sx={{ pt: 2, pb: 2 }}>
+            <Grid
+              item
+              xs={12}
+              sm={6}
+              alignItems="center"
+              sx={{ display: 'flex' }}
+            >
               <Box
                 sx={{
                   backgroundImage: `url(${cartItem.product.image})`,
@@ -53,14 +75,15 @@ function ShoppingCart() {
                 component="div"
                 variant="body1"
                 align="left"
-                sx={{ pt: 6, pb: 6, ml: 2 }}
+                sx={{ ml: 2 }}
               >
                 {cartItem.product.title}
               </Typography>
             </Grid>
             <Grid
               item
-              xs={2}
+              xs={6}
+              sm={3}
               justifyContent="center"
               alignItems="center"
               sx={{ display: 'flex' }}
@@ -74,7 +97,8 @@ function ShoppingCart() {
             </Grid>
             <Grid
               item
-              xs={3}
+              xs={6}
+              sm={3}
               justifyContent="center"
               alignItems="center"
               sx={{ display: 'flex' }}
@@ -96,19 +120,6 @@ function ShoppingCart() {
               >
                 <AddCircleOutline sx={{ color: COLORS.GREEN.DEFAULT }} />
               </IconButton>
-            </Grid>
-            <Grid xs={2}>
-              <Button
-                color="error"
-                variant="contained"
-                sx={{
-                  border: 'none',
-                  borderRadius: 50,
-                  textTransform: 'lowercase',
-                }}
-              >
-                limpar carrinho
-              </Button>
             </Grid>
           </Grid>
           <Divider sx={{ width: '100%' }} />
