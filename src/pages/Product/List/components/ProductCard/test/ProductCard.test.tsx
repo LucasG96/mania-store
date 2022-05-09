@@ -119,8 +119,8 @@ describe('Tests component ProductCard', () => {
 
     render(<ProductCard product={product} />);
 
-    const botaoAdicionar = screen.getByText('adicionar ao carrinho');
-    fireEvent.click(botaoAdicionar);
+    const addButton = screen.getByText('adicionar ao carrinho');
+    fireEvent.click(addButton);
 
     expect(mockAddProduct).toBeCalledTimes(1);
     expect(mockAddProduct).toBeCalledWith(product);
