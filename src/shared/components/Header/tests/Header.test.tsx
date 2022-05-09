@@ -26,9 +26,11 @@ describe('Tests component Header', () => {
     const logo = screen.getByAltText('Logo');
     const shoppingCart = screen.getByLabelText('Carrinho de compras');
     const badgeQuantity = screen.getByText(57);
+    const shoppingCartLink = badgeQuantity.parentElement?.firstChild;
 
     expect(logo).toBeInTheDocument();
     expect(shoppingCart).toBeInTheDocument();
     expect(badgeQuantity).toBeInTheDocument();
+    expect(shoppingCartLink).toHaveAttribute('href', '/shopping/cart');
   });
 });
