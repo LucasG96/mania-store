@@ -1,5 +1,7 @@
 ![Logo Mania de moda](https://raw.githubusercontent.com/LucasG96/mania-store/main/src/shared/assets/logo.svg?token=GHSAT0AAAAAABUGF2J4NIW4P7ZG32RCTHROYTZJLEA)
 
+##### [Access the application here.](mania-store.netlify.app)
+
 ### Online platform for selling national and imported products.
 
 Application developed in the SPA model, using the most modern technologies and automatic deployment structure.
